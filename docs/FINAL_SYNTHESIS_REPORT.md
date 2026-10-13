@@ -1,11 +1,11 @@
 # Multi-Credit Capstone Project Implementation Report
 ## SpatialCommerce 3D: Agent-Orchestrated WebXR Product Configurator with AI Spatial UI
 
-**Student**: [Jan Z. / Student Name]  
+**Student**: Jan Z. Pachla (GitHub: xen9595, Email: jan.z.pachla@gmail.com)  
 **Field of Study**: Computer Technologies, 3rd Year  
 **Academic Year**: 2025/2026  
 **Supervisor / Reviewer**: mgr inż. Wojciech Czart (`GitHub: wczart`)  
-**Repository**: `https://github.com/janzp/xr-ecommerce-agent-system` *(Grant access to `wczart`)*
+**Repository**: `https://github.com/xen9595/xr-ecommerce-agent-system` *(Grant access to `wczart`)*
 
 ---
 

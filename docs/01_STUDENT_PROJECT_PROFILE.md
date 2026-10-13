@@ -1,6 +1,6 @@
 # Document 1: Student Project Grounding Profile
 
-**Student Name**: [Jan Z. / Student Name]  
+**Student Name**: Jan Z. Pachla (GitHub: xen9595, Email: jan.z.pachla@gmail.com)  
 **Field of Study**: Computer Technologies, 3rd Year (Undergraduate / Inżynier)  
 **Academic Year**: 2025/2026  
 **Target Subjects for Credit (3-in-1 Integration)**:
