@@ -120,9 +120,9 @@ function processAICommand(userPrompt) {
 cd C:\Users\janzp\.gemini\antigravity\scratch\xr-ecommerce-agent-system
 
 # Start lightweight local web server
-python -m http.server 8080 --directory src
+py -m http.server 3000 --directory src
 
-# Open browser at: http://localhost:8080
+# Open browser at: http://localhost:3000
 ```
 
 ### Git Repository Integration:
