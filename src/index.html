@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpatialCommerce 3D — Agentic WebXR Configurator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Three.js and OrbitControls via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/webxr/VRButton.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <header class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-cube logo-icon"></i>
+                <span>SPATIAL<strong>COMMERCE</strong> 3D</span>
+            </div>
+            <div class="nav-badges">
+                <span class="badge badge-xr"><i class="fa-solid fa-vr-cardboard"></i> WebXR Ready</span>
+                <span class="badge badge-ai"><i class="fa-solid fa-brain"></i> Agentic AI Driven</span>
+                <span class="badge badge-academic"><i class="fa-solid fa-graduation-cap"></i> 3-in-1 Capstone</span>
+            </div>
+        </header>
+
+        <!-- Main Product Experience Grid -->
+        <main class="experience-grid">
+            <!-- 3D Viewport Column -->
+            <section class="viewport-section">
+                <div class="viewport-card">
+                    <div id="canvas-container"></div>
+                    
+                    <!-- Floating Overlay Controls -->
+                    <div class="viewport-overlay">
+                        <div class="view-controls">
+                            <button id="btn-rotate" class="icon-btn" title="Toggle Auto-Turntable"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            <button id="btn-reset-cam" class="icon-btn" title="Reset View"><i class="fa-solid fa-crosshairs"></i></button>
+                            <button id="btn-wireframe" class="icon-btn" title="Inspect Geometry Wireframe"><i class="fa-solid fa-vector-square"></i></button>
+                        </div>
+                        <div id="xr-button-mount"></div>
+                    </div>
+
+                    <!-- Visual Feedback Toast -->
+                    <div id="ai-status-pill" class="status-pill hidden">
+                        <i class="fa-solid fa-sparkles"></i> <span id="status-text">AI reconfiguring 3D scene...</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Details & AI Spatial UI Column -->
+            <section class="details-section">
+                <div class="product-header">
+                    <span class="category">IMMERSIVE SERIES // PROTO-XR 01</span>
+                    <h1 class="product-title">Apex Chrono-Spatial Smartwatch</h1>
+                    <div class="price-rating">
+                        <span class="price">$429.00</span>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(4.9 • 128 Reviews)</span>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Titanium unibody with sapphire crystal lens, biometric neural sensors, and dynamic photonic display. Inspect in real-time 3D or talk to the embedded AI agent to personalize materials and finishes on the fly.
+                    </p>
+                </div>
+
+                <!-- AI Spatial UI: Conversational Scene Reconfiguration -->
+                <div class="ai-spatial-panel">
+                    <div class="panel-header">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <h3>AI Spatial Interface</h3>
+                        <span class="pill-live">Interactive</span>
+                    </div>
+                    <p class="panel-subtitle">Type natural language styling prompts or click quick themes below:</p>
+                    
+                    <div class="ai-input-group">
+                        <input type="text" id="ai-prompt-input" placeholder="e.g. 'Cyberpunk neon cyan with dark chrome finish'...">
+                        <button id="btn-ai-submit" class="btn-primary"><i class="fa-solid fa-bolt"></i> Apply</button>
+                    </div>
+
+                    <div class="preset-chips">
+                        <button class="chip" data-preset="cyberpunk">Cyberpunk Neon</button>
+                        <button class="chip" data-preset="stealth">Stealth Matte Black</button>
+                        <button class="chip" data-preset="luxury">24K Royal Gold</button>
+                        <button class="chip" data-preset="emerald">Titanium Emerald</button>
+                        <button class="chip" data-preset="ruby">Crimson Gloss</button>
+                    </div>
+                </div>
+
+                <!-- Hardware Specifications -->
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <span class="spec-label">Chassis</span>
+                        <span class="spec-val" id="spec-chassis">Aerospace Ti-64</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="spec-label">Finish</span>
+                        <span class="spec-val" id="spec-finish">Anodized Satin</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="spec-label">Water Resistance</span>
+                        <span class="spec-val">100m WebXR IP68</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="spec-label">Battery</span>
+                        <span class="spec-val">7 Days Solar</span>
+                    </div>
+                </div>
+
+                <!-- Checkout Actions -->
+                <div class="checkout-actions">
+                    <button class="btn-checkout"><i class="fa-solid fa-bag-shopping"></i> Add Custom Build to Cart</button>
+                    <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+
+                <!-- Academic Multi-Subject Badge Footer -->
+                <footer class="academic-footer">
+                    <p><strong>Capstone Multi-Subject Credit:</strong> Immersive Engineering • E-Commerce Technologies • AI Pre-training & XR Simulators</p>
+                    <p class="author">Developed in Google Antigravity | Reviewer: <code>wczart</code></p>
+                </footer>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "project-filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\janzp\\.gemini\\antigravity\\scratch\\xr-ecommerce-agent-system"],
+      "description": "Enables multi-agent access to read, write, and audit 3D model assets and documentation within the workspace."
+    },
+    "web-research-fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "description": "Allows agents to query live WebXR, Three.js, and e-commerce competitive research data."
+    }
+  }
+}
